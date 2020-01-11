@@ -1,0 +1,164 @@
+/* Boyan Lakev
+2019 january
+ grid css layout*/
+
+body { 
+	 background-color: darkblue; 
+	
+	font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+	display: grid;
+	grid-template-areas: 
+    "header header "
+    "nav nav "
+    "aside section "
+    "footer footer ";
+	grid-template-rows: 110px 60px 1fr 50px;
+	grid-template-columns: 16% 1fr ;
+	grid-gap: 10px;
+  height: 100vh;
+  margin: 10px;  
+}
+@media only screen and (max-width: 600px) {
+	body { 
+		
+		
+		grid-template-areas: 
+		" header header"
+		"nav  aside"
+		"section section"
+		"footer footer ";
+		
+		grid-template-rows: 50px 1fr 1fr 50px;
+		grid-template-columns: 60% 1fr ;
+		grid-gap: 5px;
+	
+}
+}
+
+header {
+	 background-image:url("borovets6-6_0.jpg"); 
+	width:100%;
+	height:100%;
+  
+	grid-area: header;
+}
+
+nav {
+	background: darkblue;
+	grid-area: nav; 
+}
+
+section {
+	background:linear-gradient(blue,lightblue,lightblue,lightblue,lightblue,lightblue,lightblue,lightblue,white,white,white,white);
+	grid-area: section;    
+}
+
+aside {
+	background:linear-gradient(blue,lightblue,lightblue,lightblue,lightblue,lightblue,lightblue,lightblue,white,white,white,white);
+	grid-area: aside; 
+}
+
+footer {
+	color:darkblue;
+	background: lightblue;
+	grid-area: footer;
+}
+
+  section, aside, footer {
+	padding: 5px;
+}
+header{
+	padding:0px;
+}
+nav{
+	padding-left:5%;
+	/* padding-right:20px; */
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+ .buton{
+	 /* font-family: 'Amatic SC', cursive; */
+	 
+	 
+	 margin:1px ;
+	 padding: 1px; 
+	 border: 2px solid white;
+	 width:15%;
+	 height:50px;
+	 color:black;
+	 
+	 
+	 background:linear-gradient(blue,lightblue,lightblue,white,white); 
+	 border-radius: 0px 0px 3px 0px;
+	
+	text-align: center;
+	
+ }
+ 
+
+ div{
+	 float:left;
+ }
+ 
+ a {
+	 text-decoration:none;
+	 color:red;
+ }
+ .centerimg{
+	 display:block;
+	 margin-left:auto;
+	 margin-right:auto;
+	 width:70%;
+ }
+
+ }
+.citat {
+	font-family: 'Lobster', cursive;
+	color:red;
+	
+}
+ a:link, a:visited {
+	 text-decoration: none;
+	 color:black;
+	 	 
+ } 
+ a:active, a:hover {
+	 text-decoration:none;
+	 background-color:lightblue;
+	 color:darkblue;
+	 /* font-size:20px; */
+ }
+ .buton:hover {
+	 background:lightblue;
+ }
+ @media only screen and (max-width: 600px) {
+	 nav{
+	padding:5px;
+}
+	 div{
+		 clear:both;
+	 }
+	.buton { 
+	
+		 width:100%;
+	 height:50px;
+		
+		
+	
+}
+}
+ .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}

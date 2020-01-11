@@ -1,0 +1,147 @@
+
+/* Boyan Lakev
+2019 january
+ grid css layout*/
+
+body { 
+	font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+	display: grid;
+	grid-template-areas: 
+    "nav header header"
+    "nav section aside"
+    "footer footer footer";
+	grid-template-rows: 80px 1fr 50px;
+	grid-template-columns: 15% 1fr 18%;
+	grid-gap: 10px;
+  height: 100vh;
+  margin: 10px;  
+}
+@media only screen and (max-width: 600px) {
+	body { 
+		
+		
+		grid-template-areas: 
+		" header header"
+		"nav  aside"
+		"section section"
+		"footer footer ";
+		
+		grid-template-rows: 40px 1fr 1fr 50px;
+		grid-template-columns: 60% 1fr ;
+		grid-gap: 5px;
+	
+}
+}
+
+header {
+	 background: linear-gradient(black,yellow,yellow,red);
+  
+  
+	grid-area: header;
+}
+
+nav {
+	background: white;
+	grid-area: nav; 
+}
+
+section {
+	background: #ffbf00;
+	grid-area: section;    
+}
+
+aside {
+	background: white
+	grid-area: aside; 
+}
+
+footer {
+	color:white;
+	background: linear-gradient(yellow,yellow,red,black,red);
+	grid-area: footer;
+}
+
+header, nav, section, aside, footer {
+	padding: 5px;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+ .buton{
+	 /* font-family: 'Amatic SC', cursive; */
+	 
+	 
+	 margin:1px ;
+	 padding: 1px; 
+	 border: 2px solid black;
+	 width:95%;
+	 height:60px;
+	 color:black;
+	 
+	 
+	 background:linear-gradient(yellow,yellow,yellow,red); 
+	 border-radius: 3px 0px 3px 0px;
+	
+	text-align: center;
+	
+ }
+ .buton:first-child {
+	 background:linear-gradient(black,yellow,yellow,yellow,red);
+	
+ }
+ 
+ a {
+	 text-decoration:none;
+	 color:red;
+ }
+ .centerimg{
+	 display:block;
+	 margin-left:auto;
+	 margin-right:auto;
+	 width:70%;
+ }
+ #hed{
+	 font-family: 'Russo One', sans-serif;
+	 text-align:center;
+	 text-shadow: 4px 4px black;
+	 color:red;
+	 vertical-align:middle;
+ }
+ .citat {
+	font-family: 'Lobster', cursive;
+	color:red;
+	
+}
+ a:link, a:visited {
+	 text-decoration: none;
+	 color:black;
+	 	 
+ } 
+ a:active, a:hover {
+	 text-decoration:none;
+	 background-color:red;
+	 color:white;
+	 /* font-size:20px; */
+ }
+ .buton:hover {
+	 background:linear-gradient(red,red,yellow);
+ }
+ @media only screen and (max-width: 600px) {
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
+.buton{
+	height:40px;
+ }
